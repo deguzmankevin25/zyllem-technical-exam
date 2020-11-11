@@ -21,7 +21,6 @@ export class ArticleDetailsComponent implements OnInit, OnDestroy {
   
   constructor(
     private _zyllemService: ZyllemApiService,
-    private _router: Router,
     private _route: ActivatedRoute,
     private _location: Location
   ) {
