@@ -24,17 +24,17 @@ export class ArticleListComponent implements OnInit, OnDestroy  {
   dataLoaded: boolean;
 
   articleTypeArray: any[] = [
-    {type: "", label: "All"},
-    {type: "FEATURED", label: "Featured"},
-    {type: "NORMAL", label: "Normal"},
-  ]
+    {type: '', label: 'All'},
+    {type: 'FEATURED', label: 'Featured'},
+    {type: 'NORMAL', label: 'Normal'},
+  ];
 
 
   constructor(
     private _zyllemService: ZyllemApiService,
     private _router: Router
   ) {}
-  
+
   ngOnInit() {
     this.getArticles();
   }
@@ -53,18 +53,18 @@ export class ArticleListComponent implements OnInit, OnDestroy  {
 
           const content: Article = article;
 
-          if(article.type === this.ARTICLE_TYPE.FEATURED) {
+          if (article.type === this.ARTICLE_TYPE.FEATURED) {
             return new FeaturedArticle(content);
           } else {
             return new NormalArticle(content);
-          } 
+          }
 
         });
 
         this.dataLoaded = true;
         this.dataSource = new MatTableDataSource(this.articles);
-      } 
-    })
+      }
+    });
   }
 
   get ARTICLE_TYPE() {

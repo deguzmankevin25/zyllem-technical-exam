@@ -1,11 +1,11 @@
 
 
-import * as moment from "moment";
+import * as moment from 'moment';
 export abstract class Article {
-    id: string
+    id: string;
     title: string;
     author: string;
-    publishedAt: string; //date time in ISO format 
+    publishedAt: string; // date time in ISO format
     url: string;
     type: ArticleType;
 
@@ -29,7 +29,7 @@ export class NormalArticle extends Article {
     }
 }
 
-export class FeaturedArticle extends  Article{
+export class FeaturedArticle extends  Article {
     featureImgUrl: string;
 
     constructor(props: any) {
@@ -39,6 +39,6 @@ export class FeaturedArticle extends  Article{
 }
 
 export enum ArticleType {
-    NORMAL = "NORMAL",
-    FEATURED = "FEATURED",
+    NORMAL = 'NORMAL',
+    FEATURED = 'FEATURED',
 }

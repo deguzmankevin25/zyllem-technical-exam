@@ -18,7 +18,7 @@ export class ArticleDetailsComponent implements OnInit, OnDestroy {
   articlesubscriptions$: Subscription;
   article: Article;
   articleId: number;
-  
+
   constructor(
     private _zyllemService: ZyllemApiService,
     private _route: ActivatedRoute,
@@ -26,7 +26,7 @@ export class ArticleDetailsComponent implements OnInit, OnDestroy {
   ) {
     this.articleId = +this._route.snapshot.paramMap.get('id');
   }
-  
+
 
   ngOnInit() {
     this.getArticleDetails(this.articleId);
@@ -34,13 +34,13 @@ export class ArticleDetailsComponent implements OnInit, OnDestroy {
 
   getArticleDetails(id: number) {
     this.articlesubscriptions$ = this._zyllemService.getArticle(id)
-    .subscribe(res => { 
+    .subscribe(res => {
 
-      if(res.type === this.ARTICLE_TYPE.FEATURED) {
+      if (res.type === this.ARTICLE_TYPE.FEATURED) {
         this.article  = new FeaturedArticle(res);
       } else {
         this.article = new NormalArticle(res);
-      } 
+      }
     });
   }
 
