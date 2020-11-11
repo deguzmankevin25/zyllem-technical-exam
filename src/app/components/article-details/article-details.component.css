@@ -4,7 +4,7 @@
 }
   
 .example-header-image {
-    background-image: url('../../assets/images/default-avatar.png');
+    background-image: url('../../../assets/images/default-avatar.png');
     background-size: cover;
 }
 .mat-card-actions {
