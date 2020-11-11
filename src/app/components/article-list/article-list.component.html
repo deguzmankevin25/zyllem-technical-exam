@@ -52,8 +52,8 @@
     
         <!-- PublishAt Column -->
         <ng-container matColumnDef="publishedAt">
-          <mat-header-cell *matHeaderCellDef (click)="showDetailsPage(element)"> Publish Date </mat-header-cell>
-          <mat-cell *matCellDef="let element"> {{element.publishedAt}} </mat-cell>
+          <mat-header-cell *matHeaderCellDef > Publish Date </mat-header-cell>
+          <mat-cell *matCellDef="let element" (click)="showDetailsPage(element)"> {{element.publishedAt}} </mat-cell>
         </ng-container>
     
         <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
