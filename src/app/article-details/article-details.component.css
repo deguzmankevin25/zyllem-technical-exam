@@ -1,0 +1,21 @@
+
+.example-card {
+    max-width: 400px;
+}
+  
+.example-header-image {
+    background-image: url('../../assets/images/default-avatar.png');
+    background-size: cover;
+}
+.mat-card-actions {
+    padding-left: 7px;
+}
+.details-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+.action-button {
+    margin-top: 15px;
+}

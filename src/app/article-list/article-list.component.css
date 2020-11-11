@@ -1,0 +1,15 @@
+
+.mat-row {
+    cursor: pointer;
+    transition: all 0.1s ease-out;
+}
+
+.mat-row:hover {
+    background-color: #e2e2e2 !important;
+
+}
+
+.mat-header-cell {
+    font-size: 15px;
+    font-weight: bold;
+}

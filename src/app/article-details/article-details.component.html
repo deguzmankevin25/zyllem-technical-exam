@@ -1,0 +1,37 @@
+<div class="details-container">
+
+
+<mat-card class="example-card">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>{{article?.author}}</mat-card-title>
+    <mat-card-subtitle>Author</mat-card-subtitle>
+  </mat-card-header>
+  <ng-container 
+    *ngIf="article.type === ARTICLE_TYPE.FEATURED"
+  >
+  <img mat-card-image [src]="article?.featureImgUrl" [alt]="article?.title">
+</ng-container>
+  <mat-card-content>
+    <h3><a [href]="article?.url" target="_blank">{{ article?.title}}</a></h3>
+    <ng-container  *ngIf="article.type === ARTICLE_TYPE.NORMAL">
+    <p [innerHTML]="article?.description | safeHtml"> </p>
+    </ng-container>
+  </mat-card-content>
+  <mat-card-actions>
+   Published Date : {{article?.publishedAt}}
+  </mat-card-actions>
+</mat-card>
+<button
+  mat-flat-button
+  class="action-button"
+  (click)="goBack()"
+  color="primary"
+  >
+  Back to List
+</button>
+
+<!-- Copyright 2020 Google LLC. All Rights Reserved.
+    Use of this source code is governed by an MIT-style license that
+    can be found in the LICENSE file at http://angular.io/license -->
+</div>
