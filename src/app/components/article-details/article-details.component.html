@@ -13,7 +13,7 @@
   <img mat-card-image [src]="article?.featureImgUrl" [alt]="article?.title">
 </ng-container>
   <mat-card-content>
-    <h3><a [href]="article?.url" target="_blank">{{ article?.title}}</a></h3>
+    <h4><a [href]="article?.url" target="_blank">{{ article?.title}}</a></h4>
     <ng-container  *ngIf="article.type === ARTICLE_TYPE.NORMAL">
     <p [innerHTML]="article?.description | safeHtml"> </p>
     </ng-container>
