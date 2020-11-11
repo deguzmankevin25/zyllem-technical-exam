@@ -18,8 +18,8 @@ import {
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
-import { ArticleDetailsComponent } from './article-details/article-details.component';
-import { ArticleListComponent } from './article-list/article-list.component';
+import { ArticleDetailsComponent } from './components/article-details/article-details.component';
+import { ArticleListComponent } from './components/article-list/article-list.component';
 import { SafeHtmlPipe } from './pipes/safehtml.pipe';
 import { CdkTableModule } from '@angular/cdk/table';
 

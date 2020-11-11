@@ -1,9 +1,9 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ZyllemApiService } from '../app.service';
+import { ZyllemApiService } from '../../app.service';
 import { AutoUnsubscribe } from 'ngx-auto-unsubscribe';
 import { Subscription } from 'rxjs';
-import { Article, ArticleType, FeaturedArticle, NormalArticle } from '../model/article';
+import { Article, ArticleType, FeaturedArticle, NormalArticle } from '../../model/article';
 import { Location } from '@angular/common';
 
 

@@ -2,8 +2,8 @@ import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { MatTableDataSource, MatPaginator, MatSort } from '@angular/material';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
-import { ZyllemApiService } from '../app.service';
-import { Article, FeaturedArticle, NormalArticle, ArticleType } from '../model/article';
+import { ZyllemApiService } from '../../app.service';
+import { Article, FeaturedArticle, NormalArticle, ArticleType } from '../../model/article';
 import { AutoUnsubscribe } from 'ngx-auto-unsubscribe';
 
 
